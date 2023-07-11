@@ -1,0 +1,285 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+a:link {
+   color: rgb(1, 26, 1);
+   background-color: transparent;
+   text-decoration: none;
+ }
+
+ a:visited {
+   color: rgb(39, 173, 214);
+   background-color: transparent;
+   text-decoration: none;
+ }
+ .button {
+   background-color: #010c01;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   border-radius: 4px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   cursor: pointer;
+
+}
+.button span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+ }
+
+ .button span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+
+ .button:hover span {
+   padding-right: 25px;
+ }
+
+ .button:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+
+.button:hover {
+   background-color: #656d65; /* Green */
+   color: white;
+ }
+ a:hover {
+   color: red;
+   background-color: transparent;
+   text-decoration: underline;
+ }
+
+ a:active {
+   color: yellow;
+   background-color: transparent;
+   text-decoration: underline;
+ }
+form {
+  display: inline-block;
+}
+div.item {
+  /* To correctly align image, regardless of content height: */
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  /* The width of the container also implies margin around the images. */
+  width: 120px;
+
+
+  text-align : center;
+
+  /* Let's avoid our text touching the border. As
+     our text will still flow in a square, it looks
+     nicer that way, giving the feeling that it's a "real"
+     circle. */
+  padding : 1em;
+
+  /* The border will make the circle visible.
+     You could also use a background, as
+     backgrounds are clipped by border radius */
+  border : 0.5em solid rgb(3, 30, 31);
+
+  /* Let's make sure we have a square.
+     If it's not a square, we'll get an
+     ellipsis rather than a circle */
+  width  : 13em;
+  height : 13em;
+
+  /* and let's turn the square into a circle */
+  border-radius: 100%;
+}
+#test {
+  caption-side: bottom;
+}
+img {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
+.caption {
+  /* Make the caption a block so it occupies its own line. */
+  display: block;
+}
+
+
+#example3
+{
+  background-image: url('https://source.unsplash.com/collection/190727/1600x900');
+  background-size: cover;
+  text-align: center;
+
+}
+#example1 {
+    background-image: url('/admindatabase/background.jpg');
+    background-size: cover;
+    font-family: 'Crimson Pro', serif;
+
+
+  }
+  #example2
+  {
+
+      background-color: rgb(19, 104, 16);
+  }
+
+  span {
+
+    display: inline-block;
+  }
+.fancy {
+    /* Within a circle, centered text looks prettier. */
+    text-align : center;
+    /* Let's avoid our text touching the border. As
+       our text will still flow in a square, it looks
+       nicer that way, giving the feeling that it's a "real"
+       circle. */
+    padding : 1em;
+
+    /* The border will make the circle visible.
+       You could also use a background, as
+       backgrounds are clipped by border radius */
+
+
+    /* Let's make sure we have a square.
+       If it's not a square, we'll get an
+       ellipsis rather than a circle */
+    width  : 10em;
+    height : 10em;
+
+    /* and let's turn the square into a circle */
+    border-radius: 100%;
+  }
+  .abc {
+    /* Within a circle, centered text looks prettier. */
+    text-align : center;
+
+    /* Let's avoid our text touching the border. As
+       our text will still flow in a square, it looks
+       nicer that way, giving the feeling that it's a "real"
+       circle. */
+    padding : 1em;
+
+    /* The border will make the circle visible.
+       You could also use a background, as
+       backgrounds are clipped by border radius */
+    border : 0.5em solid rgb(3, 30, 31);
+
+    /* Let's make sure we have a square.
+       If it's not a square, we'll get an
+       ellipsis rather than a circle */
+    width  : 10em;
+    height : 10em;
+
+    /* and let's turn the square into a circle */
+    border-radius: 100%;
+  }
+
+
+
+
+
+</style>
+<html>
+    ,
+    <script>
+        addEventListener("click",function(evt)
+              {
+  alert("do you wnated to countious");
+
+});
+    </script>
+
+  <div id="example3">
+<h1 style=" @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); font-family: 'Pacifico', cursive;" >  Welcome</h1>
+<h2 style=" @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); font-family: 'Pacifico', cursive;"> make your day better with us
+</br>
+</br>
+</br>
+</br></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+
+
+
+
+
+
+
+</h2>
+
+</div>
+
+    <marquee behavior="" direction="" scrollamount="10" style="@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap'); font-family: 'Homemade Apple', cursive;"><h1 ><div class="d-inline p-2 bg-dark text-white">HOT&SPICY</div></h1></marquee>
+
+    <div id="example1">
+
+
+
+{% for bloger in   all_field %}
+
+<span ><form method="POST"action="{%url 'order'%}">
+<span></br></br></span>
+    <div class="card" style="width: auto;">
+    <img class="card-img-top" src="static/{{bloger.img_of_item}}" alt="Card image cap">
+    <div class="card-body">
+      <p>price ${{bloger.price_of_item}}</p>
+      <p style="@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); font-family: 'Pacifico', cursive;">{{bloger.name_of_item}}</p>
+
+
+
+    </div>
+  </div>
+ <button type="submit"  class="button" ><span>OREDR</span></button>
+    {%csrf_token%}
+  </form></span>
+
+{%endfor%}
+
+</br>
+</br>
+</br>
+</div>
+<nav aria-label="Page navigation example" style="align-items: center;">
+    <ul class="pagination justify-content-center">
+<div class="pagination justify-content-center">
+    <span class="step-links">
+
+  </span>
+  </div>
+  </ul>
+  </nav>
+<br>
+
+    <div id="example2">
+        <p> about us </p>
+        <p> content us </p>
+        <p> follow  us </p>
+    </div>
+
+
+</html>
+
+{%endblock%}
+

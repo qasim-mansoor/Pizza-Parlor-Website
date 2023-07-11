@@ -1,6 +1,3 @@
-  
-# Database
-```python
 from django.db import models
 from django.core.files import storage
 from django.db import models
@@ -15,12 +12,13 @@ class order_that(models.Model):
     phone_number=models.IntegerField(max_length=200)
     name=models.CharField(max_length=20)
     addres=models.CharField(max_length=100)
-```
 
 
+class uploader(models.Model):
+    name_of_item=models.CharField(max_length=200)
+    price_of_item=models.IntegerField(max_length=50,null=True)
+    img_of_item=models.ImageField(null=True,storage=fs)
+    number_of_item=models.CharField(null=True,max_length=200)
 
-Simple pizza delivery website using Django web framework for get order online and deliver it to customer.
-# TOOL Used   
- Django3.2,HTML,CSS,amine.js,jquery.js,unsplash,Bootstrap,pythonanywhere
 
-
+# Create your models here.
