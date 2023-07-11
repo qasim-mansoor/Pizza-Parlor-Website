@@ -3,7 +3,7 @@ This is a website built primarily using Django Framework in Python for the backe
 
 Includes modules for order placement, order tracking, bill generation and email generation.
 
-```
+```python
 from django.db import models
 from django.core.files import storage
 from django.db import models
