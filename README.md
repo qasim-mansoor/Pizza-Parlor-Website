@@ -1,4 +1,6 @@
-  
+# Description
+A Web Application for a Pizza Parlor with modules including order generation, order tracking, bill generation and automated email generation. Backend built using the Django framework. Frontend build in HTML, CSS and JS.
+
 # Database
 ```python
 from django.db import models
@@ -17,6 +19,5 @@ class order_that(models.Model):
     addres=models.CharField(max_length=100)
 ```
 
-A Web Application for a Pizza Parlor with modules including order generation, order tracking, bill generation and automated email generation. Backend built using the Django framework. Frontend build in HTML, CSS and JS.
 
 
