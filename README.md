@@ -19,7 +19,4 @@ class order_that(models.Model):
 
 A Web Application for a Pizza Parlor with modules including order generation, order tracking, bill generation and automated email generation. Backend built using the Django framework. Frontend build in HTML, CSS and JS.
 
-# TOOL Used   
- Django3.2,HTML,CSS,amine.js,jquery.js,unsplash,Bootstrap,pythonanywhere
-
 
